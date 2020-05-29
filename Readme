@@ -1,0 +1,18 @@
+
+First install Microsoft Visual C++ redistributable 2015 by the following link Download Visual C++ Redistributable for Visual Studio 2015 from Official Microsoft Download Center 47
+
+Install anaconda3 for windows from its sites.
+
+Then create a virtual python environment and activate the created virtual environment. 
+
+#conda create -n rasa python=3.6
+#conda activate rasa
+
+Now install rasa  by following Rasa docs for installation in that created python environment. # pip install rasa
+
+During installation httptools package not found error will come. Then install by following command #conda install -c conda-forge httptools
+
+
+
+
+conda install -c anaconda ujson

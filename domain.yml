@@ -1,0 +1,126 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - HelloWorld
+  - devops
+  - userdetails
+  - covidtracker
+  - slottest
+  - customslottest
+  - name_entity
+  - country_entity
+  - customslottestdevops
+  - gitproject
+  - gitrepo
+  - gitaction
+  - devopsformtest
+
+
+entities:
+  - name
+  - state
+  - country
+  - leader
+  - repo
+  - project
+  - action
+  
+
+slots:
+  name:
+    type: text
+  state:
+    type: text
+  country:
+    type: text
+  leader:
+    type: text
+  repo:
+    type: unfeaturized
+  project:
+    type: unfeaturized
+  action:
+    type: unfeaturized
+
+forms:
+  - devops_form
+
+
+actions:
+  - action_devops
+  - action_userdetails
+  - action_covidtracker
+  - action_customslottest
+  
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+# <!-- example utterance -->
+  utter_HelloWorld:
+  - text: "First program hello world learned in python"
+
+# <!-- Sample multi slot test -->
+  utter_slottest:
+    - text: "your {name} and state is {state}"
+
+    
+# <!-- custom multi slot test -->
+  utter_customslottest_greet:
+    - text: "Hi , please say your name"
+
+  utter_name_entity_greet:
+    - text: "Hi {name} , please say your country name "
+
+  utter_country_entity:
+    - text: "your name is {name} and belongs to {country} "
+
+  utter_leader_bye:
+    - text: "Bye from {leader}"
+
+   
+  # <!-- Git Repo test with form -->
+
+  utter_customslottestdevops_greet:
+  - text: "Welcome to devops tools"
+
+  utter_customslottestdevops_slot_values:
+    - text: "project name is {project} and repo name is {repo} and actions is {action}"
+  
+  utter_ask_project:
+    - text: "enter you project  name"
+  
+  utter_ask_repo:
+    - text: "enter you repo name"
+  
+  utter_ask_action:
+    - text: "enter you action "
+
+
+ 
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
